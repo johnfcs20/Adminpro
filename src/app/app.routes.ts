@@ -9,15 +9,6 @@ import { RegistrerComponent } from './login/registrer.component';
 
 
 const appRoutes: Routes = [
-
-  {path: '', component: PagesComponent, children: [
-
-    {path: 'dashboard', component: DashboardComponent},
-    {path: 'progress', component: ProgressComponent},
-    {path: 'graficas1', component: Grafica1Component},
-    {path: '', redirectTo: '/dashboard', pathMatch: 'full' }
-
-  ]},
   {path: 'register', component: RegistrerComponent},
   {path: 'login', component: LoginComponent},
   {path: '**', component: NopagefoundComponent }
