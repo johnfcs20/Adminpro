@@ -18,6 +18,8 @@ import { RegistrerComponent } from './login/registrer.component';
 // Modulos
 
 import { PagesModule } from '../app/pages/pages.module';
+// import { IncrementadorComponent } from './components/incrementador/incrementador.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,12 +33,14 @@ import { PagesModule } from '../app/pages/pages.module';
     // SidebarComponent,
     // BreadcrumbsComponent,
     // PagesComponent,
-    RegistrerComponent
+    RegistrerComponent,
+    // IncrementadorComponent
   ],
   imports: [
     BrowserModule,
     APP_ROUTES,
-    PagesModule
+    PagesModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
