@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { NopagefoundComponent } from './shared/nopagefound/nopafefound.component';
+// import { NopagefoundComponent } from './shared/nopagefound/nopafefound.component';
 // import { DashboardComponent } from './pages/dashboard/dashboard.component';
 // import { ProgressComponent } from './pages/progress/progress.component';
 // import { Grafica1Component } from './pages/grafica1/grafica1.component';
@@ -20,12 +20,14 @@ import { RegistrerComponent } from './login/registrer.component';
 import { PagesModule } from '../app/pages/pages.module';
 // import { IncrementadorComponent } from './components/incrementador/incrementador.component';
 import { FormsModule } from '@angular/forms';
+import { SettingsService } from './services/settings.service';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    // NopagefoundComponent,
+  //   NopagefoundComponent,
     // DashboardComponent,
     // ProgressComponent,
     // Grafica1Component,
@@ -40,9 +42,10 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     APP_ROUTES,
     PagesModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
-  providers: [],
+  providers: [SettingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
