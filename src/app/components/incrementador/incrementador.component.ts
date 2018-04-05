@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
-
+declare function init_plugins();
 
 @Component({
   selector: 'app-incrementador',
@@ -40,6 +40,7 @@ export class IncrementadorComponent implements OnInit {
 
   ngOnInit() {
     console.log('Leyenda', this.leyenda);
+    init_plugins();
   }
   cambiarValor(valor) {
 

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+declare function init_plugins();
 
 @Component({
   selector: 'app-grafico-dona',
@@ -14,6 +15,8 @@ export class GraficoDonaComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    init_plugins();
   }
 
 }

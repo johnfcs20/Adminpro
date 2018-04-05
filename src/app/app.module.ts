@@ -19,9 +19,15 @@ import { RegistrerComponent } from './login/registrer.component';
 
 import { PagesModule } from '../app/pages/pages.module';
 // import { IncrementadorComponent } from './components/incrementador/incrementador.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SettingsService } from './services/settings.service';
 import { SharedModule } from './shared/shared.module';
+
+// Servicios
+import {SidebarService} from './services/sidebar.service';
+import { UsuarioService } from './services/usuario/usuario.service';
+import {  HttpClientModule } from '@angular/common/http';
+import { LoginGuardGuard } from './services/guards/login-guard.guard';
 
 @NgModule({
   declarations: [
@@ -36,6 +42,7 @@ import { SharedModule } from './shared/shared.module';
     // BreadcrumbsComponent,
     // PagesComponent,
     RegistrerComponent,
+
     // IncrementadorComponent
   ],
   imports: [
@@ -43,9 +50,17 @@ import { SharedModule } from './shared/shared.module';
     APP_ROUTES,
     PagesModule,
     FormsModule,
-    SharedModule
+    ReactiveFormsModule,
+    SharedModule,
+    HttpClientModule,
+
   ],
-  providers: [SettingsService],
+  providers: [
+    SettingsService,
+    SidebarService,
+    UsuarioService,
+    LoginGuardGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
