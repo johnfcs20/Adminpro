@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../../services/usuario/usuario.service';
+import { Usuario } from '../../models/usuario.model';
 declare function init_plugins();
 @Component({
   selector: 'app-header',
@@ -8,9 +9,13 @@ declare function init_plugins();
 })
 export class HeaderComponent implements OnInit {
 
+  usuario: Usuario;
+
+
   constructor(public _usuarioService: UsuarioService) { }
 
   ngOnInit() {
+    this.usuario = this._usuarioService.usuario;
     init_plugins();
   }
 

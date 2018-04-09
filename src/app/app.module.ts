@@ -28,6 +28,8 @@ import {SidebarService} from './services/sidebar.service';
 import { UsuarioService } from './services/usuario/usuario.service';
 import {  HttpClientModule } from '@angular/common/http';
 import { LoginGuardGuard } from './services/guards/login-guard.guard';
+// import { ImagenPipe } from './pipes/imagen.pipe';
+import { SubirArchivoService } from './services/subir-archivo/subir-archivo.service';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,7 @@ import { LoginGuardGuard } from './services/guards/login-guard.guard';
     // BreadcrumbsComponent,
     // PagesComponent,
     RegistrerComponent,
+  // ImagenPipe,
 
     // IncrementadorComponent
   ],
@@ -59,6 +62,7 @@ import { LoginGuardGuard } from './services/guards/login-guard.guard';
     SettingsService,
     SidebarService,
     UsuarioService,
+    SubirArchivoService,
     LoginGuardGuard
   ],
   bootstrap: [AppComponent]
