@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare function init_plugins();
+
 @Component({
   selector: 'app-grafica1',
   templateUrl: './grafica1.component.html',
@@ -38,6 +40,7 @@ export class Grafica1Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    init_plugins();
   }
 
 }

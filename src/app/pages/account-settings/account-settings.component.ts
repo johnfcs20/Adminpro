@@ -3,6 +3,8 @@ import { DOCUMENT } from '@angular/platform-browser';
 
 import { SettingsService } from '../../services/settings.service';
 
+declare function init_plugins();
+
 @Component({
   selector: 'app-account-settings',
   templateUrl: './account-settings.component.html',
@@ -13,6 +15,7 @@ export class AccountSettingsComponent implements OnInit {
   constructor( public _ajustes: SettingsService ) { }
 
   ngOnInit() {
+    init_plugins();
     this.colocarCheck();
   }
 
