@@ -39,6 +39,7 @@ import 'rxjs/add/operator/filter';
     }
 
     ngOnInit() {
+      init_plugins();
     }
 
   }

@@ -30,6 +30,9 @@ import {  HttpClientModule } from '@angular/common/http';
 import { LoginGuardGuard } from './services/guards/login-guard.guard';
 // import { ImagenPipe } from './pipes/imagen.pipe';
 import { SubirArchivoService } from './services/subir-archivo/subir-archivo.service';
+// import { ModalUploadser } from './components/modal-upload/modal-upload.component';
+import { ModalUploadService } from './components/modal-upload/modal-upload.service';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +47,7 @@ import { SubirArchivoService } from './services/subir-archivo/subir-archivo.serv
     // BreadcrumbsComponent,
     // PagesComponent,
     RegistrerComponent,
+  // ModalUploadComponent,
   // ImagenPipe,
 
     // IncrementadorComponent
@@ -63,7 +67,8 @@ import { SubirArchivoService } from './services/subir-archivo/subir-archivo.serv
     SidebarService,
     UsuarioService,
     SubirArchivoService,
-    LoginGuardGuard
+    LoginGuardGuard,
+    ModalUploadService
   ],
   bootstrap: [AppComponent]
 })
