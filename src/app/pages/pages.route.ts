@@ -7,6 +7,7 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { LoginGuardGuard } from '../services/guards/login-guard.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
 
 
 const pagesRoute: Routes = [
@@ -23,6 +24,7 @@ const pagesRoute: Routes = [
     // mantenimientos
 
     {path: 'usuarios', component: UsuariosComponent, data: {titulo: 'Mantenimientos de usuarios'}},
+    {path: 'hospitales', component: HospitalesComponent, data: {titulo: 'Mantenimientos de hospitales'}},
 
 
     {path: '', redirectTo: '/dashboard', pathMatch: 'full' }

@@ -32,6 +32,7 @@ import { LoginGuardGuard } from './services/guards/login-guard.guard';
 import { SubirArchivoService } from './services/subir-archivo/subir-archivo.service';
 // import { ModalUploadser } from './components/modal-upload/modal-upload.component';
 import { ModalUploadService } from './components/modal-upload/modal-upload.service';
+import { HospitalService } from './services/hospital/hospital.service';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { ModalUploadService } from './components/modal-upload/modal-upload.servi
     UsuarioService,
     SubirArchivoService,
     LoginGuardGuard,
-    ModalUploadService
+    ModalUploadService,
+    HospitalService
   ],
   bootstrap: [AppComponent]
 })

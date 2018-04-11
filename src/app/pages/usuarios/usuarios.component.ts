@@ -27,7 +27,7 @@ export class UsuariosComponent implements OnInit {
   ngOnInit() {
     this.cargarUsuarios();
     this._modalUploadService.notificacion.subscribe(resp => this.cargarUsuarios());
-
+    // console.log(this._usuariosService.token);
   }
 
   mostrarModal(id: string) {
