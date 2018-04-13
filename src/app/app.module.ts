@@ -33,7 +33,7 @@ import { SubirArchivoService } from './services/subir-archivo/subir-archivo.serv
 // import { ModalUploadser } from './components/modal-upload/modal-upload.component';
 import { ModalUploadService } from './components/modal-upload/modal-upload.service';
 import { HospitalService } from './services/hospital/hospital.service';
-
+import { MedicosService } from './services/medico/medicos.service';
 
 @NgModule({
   declarations: [
@@ -70,7 +70,8 @@ import { HospitalService } from './services/hospital/hospital.service';
     SubirArchivoService,
     LoginGuardGuard,
     ModalUploadService,
-    HospitalService
+    HospitalService,
+    MedicosService
   ],
   bootstrap: [AppComponent]
 })

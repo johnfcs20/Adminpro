@@ -4,5 +4,6 @@ export class Hospital {
 
 public _id: string,
 public nombre: string,
-public usuario
+public usuario,
+public img
  ) {} }
