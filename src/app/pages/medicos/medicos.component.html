@@ -32,13 +32,14 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let medico of medicos ; let i = index">
-                            <td><img src="medico.img | imagen: 'medico'" class="img-50 img-circle"></td>
+                            <td><img [src]="medico.img | imagen: 'medico'" class="img-circle img-fluid pointer"></td>
                             <td>{{medico.nombre}}</td>
                             <td>{{ medico.hospital.nombre }}</td>
                             <td>
-                                <button [routerLink]="['/medico', medico._id]" class="btn btn-primary"><i class="fa fa-save">Guardar</i></button>
-                                <button (click)="borrarMedico(medico)" class="btn btn-danger"><i class="fa fa-trash-o"></i> Borrar</button>
+                                <button [routerLink]="['/medico/', medico._id]" class="btn btn-primary"><i class="fa fa-edit"></i></button>
+                                <button (click)="borrarMedico(medico)" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
                             </td>
+
                         </tr>
                     </tbody>
                 </table>
