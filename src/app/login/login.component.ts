@@ -4,6 +4,9 @@ import { Router } from '@angular/router';
 import { UsuarioService } from '../services/usuario/usuario.service';
 import { Usuario } from '../models/usuario.model';
 
+// import swal from 'sweetalert';
+
+
 declare const gapi: any;
 declare function init_plugins();
 
@@ -72,9 +75,9 @@ export class LoginComponent implements OnInit {
 
     let usuario = new Usuario(null, forma.value.email, forma.value.password);
     this._usuarioService.login(usuario, forma.value.recuerdame)
-                        .subscribe(correcto => this.router.navigate(['/dashboard']) );
+                        .subscribe(correcto => this.router.navigate(['/dashboard']));
     // console.log(forma.valid);
    // console.log(forma.value);
   }
-
 }
+

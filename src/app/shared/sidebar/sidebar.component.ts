@@ -4,7 +4,7 @@ import { SidebarService } from '../../services/sidebar.service';
 import { UsuarioService } from '../../services/usuario/usuario.service';
 import { Usuario } from '../../models/usuario.model';
 
-declare function init_plugins();
+// declare function init_plugins();
 
 @Component({
   selector: 'app-sidebar',
@@ -19,7 +19,8 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
     this.usuario = this._usuarioService.usuario;
-    init_plugins();
+    // init_plug ins();
+    this._sidebar.cargarMenu();
   }
 
 }

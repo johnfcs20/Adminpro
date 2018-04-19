@@ -3,7 +3,7 @@ import { Usuario } from '../../models/usuario.model';
 import { UsuarioService } from '../../services/usuario/usuario.service';
 import { SubirArchivoService } from '../../services/subir-archivo/subir-archivo.service';
 
-declare function init_plugins();
+// declare function init_plugins();
 
 @Component({
   selector: 'app-profile',
@@ -24,7 +24,7 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    init_plugins();
+   // init_plugins();
   }
 
   guardar( usuario: Usuario ) {
@@ -61,7 +61,7 @@ export class ProfileComponent implements OnInit {
 
   cambiarImagen() {
 
-  this._usuarioService.cambiarImgaen( this.imagenSubir, this.usuario._id );
+  this._usuarioService.cambiarImagen( this.imagenSubir, this.usuario._id );
   console.log( 'Estoy en cambiar imagen ' + this.imagenSubir );
   console.log( 'Estoy en cambiar imagen ' + this.usuario._id );
 

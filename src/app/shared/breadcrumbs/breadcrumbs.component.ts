@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MetaDefinition, Meta, Title } from '@angular/platform-browser';
 import { Router, ActivationEnd } from '@angular/router';
-declare function init_plugins();
+// declare function init_plugins();
 import 'rxjs/add/operator/filter';
 
 @Component({
@@ -39,7 +39,7 @@ import 'rxjs/add/operator/filter';
     }
 
     ngOnInit() {
-      init_plugins();
+      // init_plugins();
     }
 
   }

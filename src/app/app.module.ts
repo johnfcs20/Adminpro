@@ -34,6 +34,7 @@ import { SubirArchivoService } from './services/subir-archivo/subir-archivo.serv
 import { ModalUploadService } from './components/modal-upload/modal-upload.service';
 import { HospitalService } from './services/hospital/hospital.service';
 import { MedicosService } from './services/medico/medicos.service';
+import { AdminGuard } from './services/guards/admin.guard';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { MedicosService } from './services/medico/medicos.service';
     UsuarioService,
     SubirArchivoService,
     LoginGuardGuard,
+    AdminGuard,
     ModalUploadService,
     HospitalService,
     MedicosService
