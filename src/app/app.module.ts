@@ -16,7 +16,6 @@ import { APP_ROUTES } from './app.routes';
 import { RegistrerComponent } from './login/registrer.component';
 // import { Page} from './login/pages.module';
 // Modulos
-
 import { PagesModule } from '../app/pages/pages.module';
 // import { IncrementadorComponent } from './components/incrementador/incrementador.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -35,6 +34,8 @@ import { ModalUploadService } from './components/modal-upload/modal-upload.servi
 import { HospitalService } from './services/hospital/hospital.service';
 import { MedicosService } from './services/medico/medicos.service';
 import { AdminGuard } from './services/guards/admin.guard';
+import { VerificaTokenGuard } from './services/guards/verifica-token.guard';
+
 
 @NgModule({
   declarations: [
@@ -51,7 +52,6 @@ import { AdminGuard } from './services/guards/admin.guard';
     RegistrerComponent,
   // ModalUploadComponent,
   // ImagenPipe,
-
     // IncrementadorComponent
   ],
   imports: [
@@ -61,7 +61,7 @@ import { AdminGuard } from './services/guards/admin.guard';
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
-    HttpClientModule,
+    HttpClientModule
 
   ],
   providers: [
@@ -73,7 +73,8 @@ import { AdminGuard } from './services/guards/admin.guard';
     AdminGuard,
     ModalUploadService,
     HospitalService,
-    MedicosService
+    MedicosService,
+    VerificaTokenGuard
   ],
   bootstrap: [AppComponent]
 })

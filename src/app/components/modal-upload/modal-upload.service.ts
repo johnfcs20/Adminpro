@@ -12,7 +12,7 @@ export class ModalUploadService {
 
   constructor() {
 
-    console.log('Modal upload listo');
+
 
   }
 
